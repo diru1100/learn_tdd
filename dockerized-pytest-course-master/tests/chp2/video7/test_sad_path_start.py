@@ -15,7 +15,7 @@ def test_csv_reader_malformed_data_contents(city_list_location_malformed):
     We will need to wrap the following line
     in the exceptions context manager:
     """
-    breakpoint()
+    # breakpoint()
     with pytest.raises(ValueError) as exp:
         data_processor.csv_reader(city_list_location_malformed)
     assert str(exp.value) == "could not convert string to float: 'not_an_altitude'"
